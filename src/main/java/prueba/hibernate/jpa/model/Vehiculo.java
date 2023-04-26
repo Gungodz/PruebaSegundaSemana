@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.MappedSuperclass;
 
 import org.hibernate.annotations.GeneratorType;
@@ -138,7 +140,15 @@ public abstract class Vehiculo implements Conducible {
         return this.arrancado;
     }
 
-    public void setArrancado(boolean arrancado) {
+    public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+	public void setArrancado(boolean arrancado) {
         this.arrancado = arrancado;
     }
 

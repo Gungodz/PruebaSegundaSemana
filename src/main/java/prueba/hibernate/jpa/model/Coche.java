@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 @Entity
 public class Coche extends Vehiculo {
 	@Column
-    private String tipoMarchas;
+    protected String tipoMarchas;
     protected static final String TIPO = "Coche";
 
     /**

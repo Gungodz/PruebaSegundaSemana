@@ -67,6 +67,14 @@ Para utilizar la clase Barco, primero debe instanciar un objeto pasando los argu
 - Version 0.4 (2023-04-22) - añadido método parar()
 - Version 0.5 (2023-04-23) - añadido resto de métodos
 - Version 0.6 (2023-04-24) - Pruebas unitarias y correcciones
+- Version 0.7 (2023-04-26) :
+	-Implementado Hibernate y JPA
+	-Implementado persistence.xml que guarda los datos de la BD
+	-Ordenado las clases por paquetes
+	-Implementado JUnit y creado un test
+	-Mapeadas todas las clases con etiquetas
+	-Modificados ciertos atributos y añadido getters y setters necesario para hibernate
+	-Modificado MyApp.java para añadir un objeto de prueba
 
 ## 1.7. Créditos y atribuciones
 
