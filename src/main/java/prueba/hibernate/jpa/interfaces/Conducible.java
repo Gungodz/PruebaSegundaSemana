@@ -1,4 +1,4 @@
-package prueba.semana1;
+package prueba.hibernate.jpa.interfaces;
 
 /**
  * Interface Conducible.

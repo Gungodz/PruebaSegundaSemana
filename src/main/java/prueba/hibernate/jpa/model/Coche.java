@@ -1,10 +1,14 @@
-package prueba.semana1;
+package prueba.hibernate.jpa.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
 
 /**
  * Coche.java Clase para el objecto Coche
  */
+@Entity
 public class Coche extends Vehiculo {
-
+	@Column
     private String tipoMarchas;
     protected static final String TIPO = "Coche";
 
@@ -27,12 +31,20 @@ public class Coche extends Vehiculo {
         this.tipoMarchas = tipoMarchas;
 
     }
+    
+    public Coche() {
+		super();
+	}
 
-    public String getTipoMarchas() {
+	public String getTipoMarchas() {
         return tipoMarchas;
     }
 
-    /**
+    public void setTipoMarchas(String tipoMarchas) {
+		this.tipoMarchas = tipoMarchas;
+	}
+
+	/**
      * imprime los datos del coche.
      *
      **/

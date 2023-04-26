@@ -1,9 +1,14 @@
-package prueba.semana1;
+package prueba.hibernate.jpa.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
 
 /**
  * Moto.java Clase para el objecto Moto
  */
+@Entity
 public class Moto extends Vehiculo {
+	@Column
     private String tipoMoto;
     protected static final String TIPO = "Moto";
 
@@ -14,9 +19,17 @@ public class Moto extends Vehiculo {
         super(color, marca, precio, matricula, 2); // Una moto siempre tiene 2 ruedas
         this.tipoMoto = tipoMoto;
 
-    }
+    }    
 
-    public String getTipoMoto() {
+    public Moto() {
+		super();
+	}
+
+	public void setTipoMoto(String tipoMoto) {
+		this.tipoMoto = tipoMoto;
+	}
+
+	public String getTipoMoto() {
         return tipoMoto;
     }
 

@@ -1,4 +1,6 @@
-package prueba.semana1;
+package prueba.hibernate.jpa.model;
+
+import javax.persistence.*;
 
 /**
  * Barco.java Clase para el objecto Barco
@@ -7,7 +9,10 @@ package prueba.semana1;
  * @revisor: Carlos
  * @version: 1.0
  */
+
+@Entity
 public class Barco extends Vehiculo {
+	@Column
     private String tipoBarco;
     protected static final String TIPO = "Barco";
 
@@ -25,8 +30,16 @@ public class Barco extends Vehiculo {
         this.tipoBarco = tipoBarco;
 
     }
+    
+    
 
-    /**
+    public Barco() {
+		super();
+	}
+
+
+
+	/**
      * Devuelve el tipoBarco.
      *
      * @return String
@@ -35,7 +48,11 @@ public class Barco extends Vehiculo {
         return tipoBarco;
     }
 
-    @Override // <- Bien por el uso de Override
+    public void setTipoBarco(String tipoBarco) {
+		this.tipoBarco = tipoBarco;
+	}
+
+	@Override // <- Bien por el uso de Override
     public void imprimirDatos() {
         System.out.println("Este vehiculo es un barco");
         System.out.println("Este barco es de tipo" + tipoBarco);

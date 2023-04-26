@@ -1,14 +1,31 @@
-package prueba.semana1;
+package prueba.hibernate.jpa.model;
 
 import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
+import org.hibernate.annotations.GeneratorType;
+
+import prueba.hibernate.jpa.interfaces.Conducible;
 
 /**
  * Vehiculo.java Clase para el objecto Vehiculo
  */
+@MappedSuperclass
 public abstract class Vehiculo implements Conducible {
+	@Column
     protected String color;
+	@Column
     protected String marca;
+	@Column
     protected String precio;
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
     protected String matricula;
     protected int numRuedas;
     private boolean arrancado = false;
@@ -37,7 +54,12 @@ public abstract class Vehiculo implements Conducible {
 
     }
 
-    /**
+    public Vehiculo() {
+		super();
+	}
+
+
+	/**
      * Impresión de los datos del vehiculo.
      */
     public void imprimirDatos() {

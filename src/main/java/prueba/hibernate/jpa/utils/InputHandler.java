@@ -1,4 +1,4 @@
-package prueba.semana1;
+package prueba.hibernate.jpa.utils;
 
 import java.util.Arrays;
 import java.util.List;

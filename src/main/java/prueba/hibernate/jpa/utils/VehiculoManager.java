@@ -1,4 +1,9 @@
-package prueba.semana1;
+package prueba.hibernate.jpa.utils;
+
+import prueba.hibernate.jpa.model.Barco;
+import prueba.hibernate.jpa.model.Coche;
+import prueba.hibernate.jpa.model.Moto;
+import prueba.hibernate.jpa.model.Vehiculo;
 
 /**
  * VehiculoManager

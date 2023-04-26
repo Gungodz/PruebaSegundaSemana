@@ -1,4 +1,6 @@
-package prueba.semana1;
+package prueba.hibernate.jpa.controller;
+
+import prueba.hibernate.jpa.utils.VehiculoManager;
 
 /**
  * MyApp.java
